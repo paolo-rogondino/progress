@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>portfolio</title>
+
+  <!-- Collegamento al file Css carosello -->
+  <link rel="stylesheet" href="./css/stili.css">
+
+  <!-- Collegamento al file JavaScript esterno -->
+  <script src="./js/funzioni.js" defer></script>   
+  
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+      <a href="index.html"><img src="img/logo1.png" alt="foto profilo" class="fotoprofilo"></a>
+      <div class="navbar-links">
+          <div class="hover-transform"><a href="chi_sono.html">Chi sono</a></div>
+          <div class="hover-transform"><a href="i_miei_lavori.html">I miei lavori</a></div>
+          <div class="hover-transform"><a href="contatti.html">Contatti</a></div>
+      </div>
+      <div class="hamburger-menu" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+      </div>
+  </div>
+
+  <div class="portfolio-contenitore">
+    <!-- Testo sulla sinistra -->
+    <div class="testo-contenitore">
+        <h1>B e n v e n u t o !</h1>
+        <p>Questo è il mio portfolio, dove potrai trovare:</p>
+        <ul>
+            <li>Una breve descrizione sulla mia persona</li>
+            <li>Le mie ultime esperienze lavorative e formative</li>
+            <li>Un modulo per contattarmi</li>
+        </ul>
+        <p>Che figata questa animazione non trovi?</p>
+    </div>
+
+    <!-- Carosello sulla destra -->
+    <div id="carosello">
+        <img id="caroselloImage" src="img/carosello1.png" alt="Immagine 1">
+    </div>
+</div>
+
+  
+
+ <!-- Footer -->
+<div class="footer">
+  <span class="footer-text">Realizzato da: <br>Paolo Rogondino</span>
+  <div class="footer-links">
+      <a href="https://www.facebook.com" target="_blank">
+          <img src="img/facebook.png" alt="Icona di Facebook" class="logo">
+      </a>      
+      <a href="https://www.instagram.com" target="_blank">
+          <img src="img/insta.png" alt="Icona di Instagram" class="logoinsta">
+      </a>
+      <a href="https://www.linkedin.com" target="_blank">
+        <img src="img/linkedin.png" alt="Icona di Linkedin" class="logo">
+    </a>
+  </div>
+</div>
+
+</body>
+</html>
+

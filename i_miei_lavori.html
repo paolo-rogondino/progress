@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>portfolio</title>
+
+  <!-- Collegamento al file Css carosello -->
+  <link rel="stylesheet" href="./css/stili.css">
+
+  <!-- Collegamento al file JavaScript esterno -->
+  <script src="./js/funzioni.js" defer></script>   
+  
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="index.html"><img src="img/logo1.png" alt="foto profilo" class="fotoprofilo"></a>
+        <div class="navbar-links">
+            <div class="hover-transform"><a href="chi_sono.html">Chi sono</a></div>
+            <div class="hover-transform"><a href="i_miei_lavori.html">I miei lavori</a></div>
+            <div class="hover-transform"><a href="contatti.html">Contatti</a></div>
+        </div>
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <h1 class="section-title">I MIEI LAVORI</h1>
+
+    <!-- Bottone per visualizzare la prima esperienza -->
+    <p class="experience-intro">
+        <span class="toggle-button" onclick="toggleTable('myTable')">La mia esperienza presso: LEADER</span>
+    </p>
+    
+    <!-- Contenitore della prima esperienza -->
+    <div id="myTable" class="table-container">
+        <div class="table-header">
+            <div class="table-cell">Azienda</div>
+            <div class="table-cell">Ruolo</div>
+            <div class="table-cell">Linguaggio</div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell">Leader</div>
+            <div class="table-cell">Corsista</div>
+            <div class="table-cell">Corso IFTS Sviluppatore Software</div>
+        </div>
+    </div>
+    
+    <!-- Bottone per visualizzare la seconda esperienza -->
+    <p class="experience-intro">
+        <span class="toggle-button" onclick="toggleTable('myTable2')">La mia esperienza presso: Studio di Consulenza del Lavoro</span>
+    </p>
+    
+    <!-- Contenitore della seconda esperienza -->
+    <div id="myTable2" class="table-container">
+        <div class="table-header">
+            <div class="table-cell">Azienda</div>
+            <div class="table-cell">Ruolo</div>
+            <div class="table-cell">Linguaggio</div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell">Studio Robles</div>
+            <div class="table-cell">Impiegato</div>
+            <div class="table-cell">Elaboratore dati, Addetto buste paga</div>
+        </div>
+    </div>
+    
+    <!-- Immagine decorativa -->
+    <div class="contenitore">
+        <p class="image-caption">Progetti in arrivo!</p>
+        <img src="img/loading.gif" class="fotoimieilavori" alt="Progetti in arrivo">        
+    </div>
+    
+
+
+ <!-- Footer -->
+ <div class="footer">
+    <span class="footer-text">Realizzato da: <br>Paolo Rogondino</span>
+    <div class="footer-links">
+        <a href="https://www.facebook.com" target="_blank">
+            <img src="img/facebook.png" alt="Icona di Facebook" class="logo">
+        </a>      
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="img/insta.png" alt="Icona di Instagram" class="logoinsta">
+        </a>
+        <a href="https://www.linkedin.com" target="_blank">
+          <img src="img/linkedin.png" alt="Icona di Linkedin" class="logo">
+      </a>
+    </div>
+  </div>
+
+</body>
+</html>
