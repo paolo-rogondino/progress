@@ -53,11 +53,27 @@ body {
 }
 
 /* Menu di navigazione per mobile */
+.navbar-links.active {
+  display: flex; /* Mostra il menu quando attivo */
+  flex-direction: column; /* Dispone i link in colonna */
+  position: right; /* Posiziona il menu */
+  top: 60px; /* Sotto la navbar */
+  left: 0;
+  width: 100%; /* Occupa tutta la larghezza */
+  background-color: transparent; /* Sfondo bianco */
+  z-index: 10; /* Porta il menu in primo piano */
+  padding: 10px; /* Spazio interno */
+  gap: 10px; /* Spazio tra i link */
+}
+
+
 .navbar-links {
   display: flex;
 }
 .navbar-links a {
+  font-size: 0.5 rem; /* Cambia la dimensione del testo */
   padding: 10px 15px;
+
 }
 
 /* Contenitore principale */
@@ -459,7 +475,7 @@ body {
 .contatti {
   display: flex;
   flex-direction: row; /* Gli elementi si dispongono orizzontalmente */
-  max-width: 900px;
+  max-width: 60%;
   width: 100%;
   align-items: center;
   gap: 20px;
