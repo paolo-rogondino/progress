@@ -42,13 +42,14 @@ body {
 .hamburger-menu {
   display: none;
   flex-direction: column;
-  cursor: pointer;
+  cursor: pointer
 }
 .hamburger-menu div {
   width: 25px;
   height: 3px;
   background-color: black;
   margin: 4px 0;
+
 }
 
 /* Menu di navigazione per mobile */
@@ -465,6 +466,7 @@ body {
   padding: 20px; /* Spazio interno uniforme */
   background-color: #fff;
   margin: 0 auto;
+  box-sizing: border-box; /* Assicura che padding e bordi siano inclusi nella larghezza */
 }
 
 /* Immagine */
