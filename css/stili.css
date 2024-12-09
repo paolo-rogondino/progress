@@ -159,7 +159,7 @@ body {
   position: fixed; /* Fissa il footer in basso */
   bottom: 0; /* Aggancia il footer al bordo inferiore */
   left: 0;
-  width: 95%;
+  max-width: 100%;
   display: flex; /* Usa Flexbox per il layout */
   justify-content: space-between; /* Testo a sinistra e loghi a destra */
   align-items: center; /* Centra verticalmente il contenuto */
@@ -226,6 +226,7 @@ body {
   }
 
   .footer {
+    max-width: 100%;
     position: static; /* Footer diventa parte del normale flusso */
     box-shadow: none; /* Rimuove l'ombra per un aspetto più semplice */
   }
