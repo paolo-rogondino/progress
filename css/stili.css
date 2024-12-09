@@ -159,8 +159,6 @@ body {
 
 /* Footer */
 .footer {
-  position: fixed; /* Fissa il footer in basso */
-  bottom: 0; /* Aggancia il footer al bordo inferiore */
   left: 0;
   width: 95%;
   display: flex; /* Usa Flexbox per il layout */
