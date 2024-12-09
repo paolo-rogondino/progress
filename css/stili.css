@@ -213,8 +213,12 @@ body {
   .navbar-links a {
     width: 100%; /* Ogni link occupa tutta la larghezza del contenitore */
     text-align: center; /* Centra il testo */
-    padding: 10px 0; /* Spazio verticale tra i link */
-    border-bottom: 1px solid #ccc; /* Linea divisoria tra i link (opzionale) */
+    padding: 5px 0; /* Spazio verticale tra i link */    
+    position: left; /* Posiziona il menu */
+    width: 100%; /* Occupa tutta la larghezza */
+    background-color: transparent; /* Sfondo bianco */  
+    gap: 5px; /* Spazio tra i link */
+    
   }
 
   .hamburger-menu {
@@ -374,7 +378,7 @@ body {
   color: black;
   font-weight: bold;
   cursor: pointer;
-  text-decoration: underline;
+  text-decoration: none;
   transition: color 0.3s ease;
 }
 
@@ -424,20 +428,16 @@ body {
 /* Immagine decorativa */
 .contenitore {
   text-align: center;
-  margin-top: 30px;
+  margin-top: 5px;
+
 }
 
 .fotoimieilavori {
-  max-width: 40%;
+  max-width: 30%;
   height: auto;
-  border-radius: 8px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
 }
 
-.fotoimieilavori:hover {
-  transform: scale(1.1);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
 
 /* Didascalia dell'immagine */
 .image-caption {
@@ -460,6 +460,10 @@ body {
 
   .contenitore {
       padding: 0 20px;
+  }
+
+  .toggle-button {
+    text-decoration: none;
   }
 }
 
