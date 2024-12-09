@@ -64,6 +64,7 @@ body {
   z-index: 10; /* Porta il menu in primo piano */
   padding: 10px; /* Spazio interno */
   gap: 10px; /* Spazio tra i link */
+  box-sizing: border-box; /* Assicura che padding non causi overflow */
 }
 
 
@@ -81,10 +82,11 @@ body {
   display: flex; /* Flexbox per il layout */
   justify-content: space-between; /* Sposta il testo a sinistra e il carosello a destra */
   align-items: center; /* Centra verticalmente il contenuto */
-  max-width: 1200px; /* Larghezza massima del contenitore */
+  max-width: 100%; /* Larghezza massima del contenitore */
   height: 50vh; /* Riempie l'altezza del viewport */
   margin: 0 auto; /* Centra il contenitore nella pagina */
   padding: 20px;
+  box-sizing: border-box; /* Include padding */
  }
 
 /* Contenitore del testo */
@@ -95,6 +97,7 @@ body {
   justify-content: center; /* Centra verticalmente il testo */
   background-color: #f1f1f1;
   border-radius: 50%;
+  align-items: center;
 }
 
 .testo-contenitore h1 {
@@ -159,11 +162,13 @@ body {
   position: fixed; /* Fissa il footer in basso */
   bottom: 0; /* Aggancia il footer al bordo inferiore */
   left: 0;
-  max-width: 100%;
+  width: 95%;
   display: flex; /* Usa Flexbox per il layout */
   justify-content: space-between; /* Testo a sinistra e loghi a destra */
   align-items: center; /* Centra verticalmente il contenuto */
   padding: 10px 20px;
+  background-color: transparent;
+  box-sizing: border-box; /* Assicura che padding non causi overflow */
 }
 
 .footer-text {
@@ -204,10 +209,12 @@ body {
     flex-direction: column; /* Dispone i link in colonna */
     align-items: center; /* Centra i link */
     width: 100%; /* Larghezza massima */
+  
   }
 
   .navbar-links.active {
     display: flex; /* Mostra il menu quando attivo */
+    overflow-x: hidden; /* Evita scrolling orizzontale */
   }
 
   .navbar-links a {
@@ -226,9 +233,13 @@ body {
   }
 
   .footer {
-    max-width: 100%;
     position: static; /* Footer diventa parte del normale flusso */
     box-shadow: none; /* Rimuove l'ombra per un aspetto più semplice */
+  }
+
+  .footer-text {
+    text-align: left; /* Allinea il testo a sinistra */
+    font-size: 0.65rem;
   }
 }
 
