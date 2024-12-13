@@ -3,76 +3,130 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>portfolio</title>
+  <title>Portfolio</title>
 
-  <!-- Collegamento al file Css carosello -->
-  <link rel="stylesheet" href="./css/stili.css">
+   <!-- Bootstrap CSS -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+   <style>
+     .navbar-nav .nav-link {
+       transition: transform 0.3s ease, font-size 0.3s ease;
+       margin: 0 15px;
+     }
+ 
+     .navbar-nav .nav-link:hover {
+       transform: scale(1.2);
+       font-size: 1.1rem;
+     }
+
+     .footer-links img {
+      width: 60px;
+      height: 60px;
+      margin: 0 15px;
+    }
+
+    @media (max-width: 576px) {
+      .footer-links img {
+        width: 40px;
+        height: 40px;
+        margin: 0 5px;
+      }
+    }
+ 
+     </style>
 
   <!-- Collegamento al file JavaScript esterno -->
-  <script src="./js/funzioni.js" defer></script>   
-  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="./js/funzioni.js" defer></script>
 </head>
 <body>
 
-    <!-- Navbar -->
-    <div class="navbar">
-      <a href="index.html"><img src="img/logo1.png" alt="foto profilo" class="fotoprofilo"></a>
-      <div class="navbar-links">
-          <div class="hover-transform"><a href="chi_sono.html">Chi sono</a></div>
-          <div class="hover-transform"><a href="i_miei_lavori.html">I miei lavori</a></div>
-          <div class="hover-transform"><a href="contatti.html">Contatti</a></div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <img src="img/logo1.png" alt="foto profilo" class="rounded-circle" style="width: 200px; height: 200px; object-fit: cover;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="chi_sono.html">Chi sono</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="i_miei_lavori.html">I miei lavori</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contatti.html">Contatti</a>
+          </li>
+        </ul>
       </div>
-      <div class="hamburger-menu" onclick="toggleMenu()">
-          <div></div>
-          <div></div>
-          <div></div>
-      </div>
-  </div>
+    </div>
+  </nav>
 
-  <div class="portfolio-contenitore">
-    <!-- Testo sulla sinistra -->
-    <div class="testo-contenitore">
-        <h1>B e n v e n u t o !</h1>
-        <p>Questo è il mio portfolio, dove potrai trovare:</p>
-        <ul>
+  <!-- Contenitore principale -->
+<div class="container my-5">
+    <div class="row align-items-center">
+      <!-- Testo sulla sinistra -->
+      <div class="col-lg-6 mb-4">
+        <div class="bg-light p-4 shadow-sm text-center" style="border-radius: 50%;">
+          <h1 class="display-4">Benvenuto!</h1>
+          <p class="lead">Questo è il mio portfolio, dove potrai trovare:</p>
+          <ul class="text-start">
             <li>Una breve descrizione sulla mia persona</li>
             <li>Le mie ultime esperienze lavorative e formative</li>
             <li>Un modulo per contattarmi</li>
-        </ul>
-        <p>Che figata questa animazione non trovi?</p>
+          </ul>
+          <p class="fw-bold">Che figata questa animazione non trovi?</p>
+        </div>
+      </div>
+  
+     <!-- Carosello sulla destra -->
+<div class="col-lg-6">
+    <div id="portfolioCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/carosello1.png" class="d-block w-75 mx-auto" alt="Immagine 1">
+        </div>
+        <div class="carousel-item">
+          <img src="img/carosello2.png" class="d-block w-75 mx-auto" alt="Immagine 2">
+        </div>
+        <div class="carousel-item">
+          <img src="img/carosello3.png" class="d-block w-75 mx-auto" alt="Immagine 3">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
     </div>
-
-    <!-- Carosello sulla destra -->
-    <div id="carosello">
-        <img id="caroselloImage" src="img/carosello1.png" alt="Immagine 1">
-    </div>
-</div>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
+  </div>
+  
   
 
- <!-- Footer -->
-<div class="footer">
-  <span class="footer-text">Realizzato da: <br>Paolo Rogondino</span>
-  <div class="footer-links">
-      <a href="https://www.facebook.com" target="_blank">
-          <img src="img/facebook.png" alt="Icona di Facebook" class="logo">
-      </a>      
-      <a href="https://www.instagram.com" target="_blank">
-          <img src="img/insta.png" alt="Icona di Instagram" class="logoinsta">
-      </a>
-      <a href="https://www.linkedin.com" target="_blank">
-        <img src="img/linkedin.png" alt="Icona di Linkedin" class="logo">
-    </a>
-  </div>
-</div>
+
+  <!-- Footer -->
+  <footer class="py-4 mt-auto">
+    <div class="container d-flex justify-content-between align-items-center">
+      <span class="text-muted">Realizzato da: <br> Paolo Rogondino</span>
+      <div class="footer-links">
+        <a href="https://www.facebook.com/paolo.rogondino/" target="_blank">
+          <img src="img/facebook.png" alt="Icona di Facebook" class="img-fluid">
+        </a>
+        <a href="https://www.instagram.com/paolorogondino95/" target="_blank">
+          <img src="img/insta.png" alt="Icona di Instagram" class="img-fluid">
+        </a>
+        <a href="https://www.linkedin.com/in/francesco-paolo-rogondino-b74275243/" target="_blank">
+          <img src="img/linkedin.png" alt="Icona di Linkedin" class="img-fluid">
+        </a>
+      </div>
+    </div>
+  </footer>
 
 </body>
 </html>
-

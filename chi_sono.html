@@ -1,96 +1,158 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>portfolio</title>
+  <title>Chi Sono</title>
 
-  <!-- Collegamento al file Css -->
-  <link rel="stylesheet" href="./css/stili.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .navbar-nav .nav-link {
+      transition: transform 0.3s ease, font-size 0.3s ease;
+      margin: 0 15px;
+    }
+
+    .navbar-nav .nav-link:hover {
+      transform: scale(1.2);
+      font-size: 1.1rem;
+    }
+
+    .footer-links img {
+      width: 60px;
+      height: 60px;
+      margin: 0 15px;
+    }
+
+    @media (max-width: 576px) {
+      .footer-links img {
+        width: 40px;
+        height: 40px;
+        margin: 0 5px;
+      }
+    }
+    
+  </style>
 
   <!-- Collegamento al file JavaScript esterno -->
-  <script src="./js/funzioni.js" defer></script>   
-  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+  <script src="./js/funzioni.js" defer></script>
 </head>
 <body>
+
   <!-- Navbar -->
-  <div class="navbar">
-    <a href="index.html"><img src="img/logo1.png" alt="foto profilo" class="fotoprofilo"></a>
-    <div class="navbar-links">
-        <div class="hover-transform"><a href="chi_sono.html">Chi sono</a></div>
-        <div class="hover-transform"><a href="i_miei_lavori.html">I miei lavori</a></div>
-        <div class="hover-transform"><a href="contatti.html">Contatti</a></div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+    <div class="container">
+      <a href="index.html" class="navbar-brand">
+        <img src="img/logo1.png" alt="foto profilo" class="rounded-circle" style="width: 150px; height: 150px; object-fit: cover;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="chi_sono.html">Chi sono</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="i_miei_lavori.html">I miei lavori</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contatti.html">Contatti</a>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="hamburger-menu" onclick="toggleMenu()">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
-</div>
+  </nav>
 
   <!-- Sezione Chi Sono -->
-  <div class="sezione-intestazione">
-      <h1>CHI SONO</h1>
+  <div class="container text-center my-5">
+    <h1 class="display-4">Chi Sono</h1>
   </div>
 
-  <div class="introduzione">
-      <img src="./img/logo.jpg" alt="Foto Profilo" class="fotoprofilo">
-      <p><b>Ciao! Benvenuto nel mio portfolio.</b><br>Non ti annoierò con la solita presentazione sul chi sono, cosa voglio e dove sto  andando... anche perché, sinceramente, non è mai così interessante un monologo su se stessi!<br>
-        Invece, ti parlerò di alcune mie qualità:<br>               
-        Ad esempio,<br><b>LA CREATIVITA'</b>(questo sito l'ho progettato io!), <b>LA TENACIA</b> e la voglia di mettermi in gioco (a 29 anni ho deciso di frequentare un corso come sviluppatore software), oppure del mio spirito di gruppo e <b>COLLABORAZIONE</b> (sì, sono il tipo che gioca a calcetto il giovedì).<br>
-        Come vedi, potrei raccontarti tanto sulle mie capacità e su come queste possano essere efficaci in un ambiente di lavoro.<br>E se sei arrivato fin qui, vuol dire che un po’ di curiosità l’ho suscitata… in altre parole, ho catturato la tua attenzione!<br>
-        Qui sotto trovi una mia TIMELINE e, se vuoi approfondire il CHI SONO, puoi scaricare il mio CV o contattarmi direttamente.
+  <div class="container my-5">
+    <div class="row align-items-center">
+      <!-- Immagine e testo -->
+      <div class="col-lg-4 text-center">
+        <img src="./img/logo.jpg" alt="Foto Profilo" class="rounded-circle img-fluid" style="width: 150px; height: 150px; object-fit: cover;">
+      </div>
+      <div class="col-lg-8">
+        <p><strong>Ciao! Benvenuto nel mio portfolio.</strong><br>
+          Non ti annoierò con la solita presentazione sul chi sono, cosa voglio e dove sto andando... anche perché, sinceramente, non è mai così interessante un monologo su se stessi!<br>
+          Invece, ti parlerò di alcune mie qualità:<br>
+          Ad esempio, <strong>LA CREATIVITÀ</strong> (questo sito l'ho progettato io!), <strong>LA TENACIA</strong> e la voglia di mettermi in gioco (a 29 anni ho deciso di frequentare un corso come sviluppatore software), oppure del mio spirito di gruppo e <strong>COLLABORAZIONE</strong> (sì, sono il tipo che gioca a calcetto il giovedì).<br>
+          Come vedi, potrei raccontarti tanto sulle mie capacità e su come queste possano essere efficaci in un ambiente di lavoro.<br>
+          E se sei arrivato fin qui, vuol dire che un po’ di curiosità l’ho suscitata… in altre parole, ho catturato la tua attenzione!<br>
+          Qui sotto trovi una mia TIMELINE e, se vuoi approfondire il CHI SONO, puoi scaricare il mio CV o contattarmi direttamente.
         </p>
+      </div>
+    </div>
   </div>
 
   <!-- Sezione Timeline -->
-  <div class="sezione-timeline">
-      <div>TIMELINE</div>
-      <div><a href="./cv/Rogondino Paolo_CV.pdf" download>Scarica CV</a></div>
+  <div class="container text-center my-5">
+    <h2 class="display-5">Timeline</h2>
+    <a href="./cv/Rogondino Paolo_CV.pdf" download class="btn btn-primary mt-3">Scarica CV</a>
   </div>
 
-   <!-- Esperienze a scacchiera -->
-   <div class="esperienze">
-    <div class="experience-item experience-left">
-        <ul>
-            <li>dal 27/09/2024 - in corso</li>
-            <li>Azienda: LEADER</li>
-            <li>Ruolo: Corsista</li>
-        </ul>
-    </div>
-    <div class="experience-item experience-right">
-        <ul>
-            <li>dal 13/03/2024 al 28/09/2024</li>
-            <li>Azienda: Studio Robles</li>
-            <li>Ruolo: Impiegato</li>
-        </ul>
-    </div>
-    <div class="experience-item experience-left">
-        <ul>
-            <li>dal 16/01/2024 - in corso</li>
-            <li>Azienda: Lord Byron College</li>
-            <li>Ruolo: Corsista</li>
-        </ul>
-    </div>
-</div>
+  <!-- Esperienze a scacchiera -->
+  <div class="container my-5">
+    <div class="row">
+      <!-- Esperienza 1 -->
+      <div class="col-md-6 mb-4">
+        <div class="border p-3 rounded-3 shadow-sm text-start">
+          <ul class="list-unstyled">
+            <li><strong>Dal:</strong> 27/09/2024 - in corso</li>
+            <li><strong>Azienda:</strong> LEADER</li>
+            <li><strong>Ruolo:</strong> Corsista</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6 mb-4"></div>
 
-  
- <!-- Footer -->
-<div class="footer">
-    <span class="footer-text">Realizzato da: <br>Paolo Rogondino</span>
-    <div class="footer-links">
-        <a href="https://www.facebook.com" target="_blank">
-            <img src="img/facebook.png" alt="Icona di Facebook" class="logo">
-        </a>      
-        <a href="https://www.instagram.com" target="_blank">
-            <img src="img/insta.png" alt="Icona di Instagram" class="logoinsta">
+      <!-- Esperienza 2 -->
+      <div class="col-md-6 mb-4"></div>
+      <div class="col-md-6 mb-4">
+        <div class="border p-3 rounded-3 shadow-sm text-start">
+          <ul class="list-unstyled">
+            <li><strong>Dal:</strong> 13/03/2024 al 28/09/2024</li>
+            <li><strong>Azienda:</strong> Studio Robles</li>
+            <li><strong>Ruolo:</strong> Impiegato</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Esperienza 3 -->
+      <div class="col-md-6 mb-4">
+        <div class="border p-3 rounded-3 shadow-sm text-start">
+          <ul class="list-unstyled">
+            <li><strong>Dal:</strong> 16/01/2024 - in corso</li>
+            <li><strong>Azienda:</strong> Lord Byron College</li>
+            <li><strong>Ruolo:</strong> Corsista</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6 mb-4"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="py-4 mt-auto">
+    <div class="container d-flex justify-content-between align-items-center">
+      <span class="text-muted">Realizzato da: <br> Paolo Rogondino</span>
+      <div class="footer-links">
+        <a href="https://www.facebook.com/paolo.rogondino/" target="_blank">
+          <img src="img/facebook.png" alt="Icona di Facebook" class="img-fluid">
         </a>
-        <a href="https://www.linkedin.com" target="_blank">
-          <img src="img/linkedin.png" alt="Icona di Linkedin" class="logo">
-      </a>
+        <a href="https://www.instagram.com/paolorogondino95/" target="_blank">
+          <img src="img/insta.png" alt="Icona di Instagram" class="img-fluid">
+        </a>
+        <a href="https://www.linkedin.com/in/francesco-paolo-rogondino-b74275243/" target="_blank">
+          <img src="img/linkedin.png" alt="Icona di Linkedin" class="img-fluid">
+        </a>
+      </div>
     </div>
-  </div>
+  </footer>
 
 </body>
 </html>
